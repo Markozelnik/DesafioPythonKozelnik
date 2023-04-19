@@ -2,18 +2,24 @@ import json
 from pathlib import Path
 from pprint import pprint
 
-  
+#la idea en un futuro seria registrarse y tener un nivel de abono con distintos beneficios dependiendo tu abono
+# en un futuro hacer algun apartado en html con los distinos abonos para que el usuario pueda ver
+
+print("Buenos dias, bienvenido a Eslovenos Fc")
+print("Los distintos abonos disponibles son: bronce, oro y plata") #ver para poner mas informacion para que los usuarios sepan mas de los niveles 
 #ingreso de nuevos usuarios
 
 def crear_usuarios(base_de_datos):
 
-    formulario = {}
+    inscripcion = {}
 
-    formulario['usuario'] = input('Ingrese un nuevo usuario: ')
+    inscripcion['usuario'] = input('Ingrese un nuevo usuario: ')
 
-    formulario['contraseña'] = input('Ingrese su nueva contraseña: ')
+    inscripcion['contraseña'] = input('Ingrese su nueva contraseña: ')
+    
+    inscripcion['abono'] = input('Ingrese nuevo nivel de abono: ')
 
-    base_de_datos.append(formulario)
+    base_de_datos.append(inscripcion)
 
     try:
 
@@ -69,13 +75,20 @@ def login(base_de_datos):
             print("Usuario encontrado")
 
             password = input('Ingrese contraseña: ')
+            
+            abono = input("Ingrese su abono: ")
 
             if password == elemento_de_lista.get("contraseña"):
 
                 print("Contraseña correcta")
 
                 validacion = True
-
+                
+                if abono == elemento_de_lista.get("abono"):
+                    
+                    print("El abono coincide")
+                    #revisar para poder preguntar si desea cambiar su abono y que cambie en json
+                    
                 break
 
             else:
@@ -95,7 +108,7 @@ def login(base_de_datos):
  
 
  
-
+#posibles erroes
 def cargar_datos():
 
     if ruta_archivo.exists():
@@ -122,15 +135,12 @@ def cargar_datos():
 
  
 
- 
-
+#mostrare la info
 def mostrar_información(base_de_datos):
 
     pprint(base_de_datos)
 
- 
-
- 
+  
 
 def main():
 
@@ -156,10 +166,6 @@ def main():
 
         preguntar_si_crear_usuarios(base_de_datos)
 
-       
-
- 
-
  
 
 # Variables globales
@@ -167,7 +173,6 @@ def main():
 BASE_DIR = Path(__file__).resolve().parent
 
 ruta_archivo = BASE_DIR / 'archivo.json'
-
- 
+#revisar error de contraseña en json (aparece mal el nombre contraseña)
 
 main()
