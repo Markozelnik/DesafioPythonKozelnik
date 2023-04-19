@@ -6,14 +6,16 @@ from pprint import pprint
 # en un futuro hacer algun apartado en html con los distinos abonos para que el usuario pueda ver
 
 print("Buenos dias, bienvenido a Eslovenos Fc")
-print("Los distintos abonos disponibles son: bronce, oro y plata") #ver para poner mas informacion para que los usuarios sepan mas de los niveles 
+print("Los distintos abonos disponibles son: bronce, oro y plata") 
+print("")
+#ver para poner mas informacion para que los usuarios sepan mas de los niveles 
 #ingreso de nuevos usuarios
 
 def crear_usuarios(base_de_datos):
     inscripcion = {}
     inscripcion['usuario'] = input('Ingrese un nuevo usuario: ')
     inscripcion['contraseña'] = input('Ingrese su nueva contraseña: ')
-    inscripcion['abono'] = input('Ingrese nuevo nivel de abono: ')
+    inscripcion['abono'] = input('Ingrese nuevo nivel de abono: ')#revisar para que sea mejor en un futuro
     base_de_datos.append(inscripcion)
     try:
         with open(ruta_archivo, 'w') as archivo:
@@ -23,13 +25,10 @@ def crear_usuarios(base_de_datos):
     return base_de_datos
 
  
-
- 
 #pregnta una vez termine de registrarce, si desea crear otro usuario 
-
-def preguntar_si_crear_usuarios(base_de_datos):
+def preguntar_crear_usuarios(base_de_datos):
     while True:
-        nuevos_datos = input("¿Desea ingresar un nuevo usuario?: s/n: ")
+        nuevos_datos = input("¿Desea ingresar un nuevo usuario?: si/no: ")
         if nuevos_datos.lower().strip()[0] == 's':
             crear_usuarios(base_de_datos)
             continue
@@ -37,10 +36,8 @@ def preguntar_si_crear_usuarios(base_de_datos):
             break
     return base_de_datos
 
- 
 
 #cuando vuelve a empezar el proceso, verifica el usuario y una vez encontrado pregunta si desea ingresar otro 
-
 def login(base_de_datos):
     validacion = False
     print('INGRESO AL SISTEMA')
@@ -50,7 +47,7 @@ def login(base_de_datos):
             print("Usuario encontrado")
             password = input('Ingrese contraseña: ')
             abono = input("Ingrese su abono: ")
-            if password == elemento_de_lista.get("contraseña"):
+            if password == elemento_de_lista.get("contraseña"):#en futuro mejorar para que quede todo en orden y no al final
                 print("Contraseña correcta")
                 validacion = True
                 if abono == elemento_de_lista.get("abono"):
@@ -66,8 +63,6 @@ def login(base_de_datos):
     return validacion
 
  
-
- 
 #posibles erroes
 def cargar_datos():
     if ruta_archivo.exists():
@@ -76,38 +71,32 @@ def cargar_datos():
                 base_de_datos = json.load(archivo)
                 return base_de_datos
         except json.decoder.JSONDecodeError:
-            print("El archivo existe pero no es un formato JSON")
+            print("El archivo existe pero no es valido")
             return False
     else:
         print("No existe el archivo. Se creará uno nuevo")
     return False
 
  
-
 #mostrare la info
 def mostrar_información(base_de_datos):
     pprint(base_de_datos)
   
-
 def main():
     base_de_datos = cargar_datos()
     if not base_de_datos:
         base_de_datos = []
-        preguntar_si_crear_usuarios(base_de_datos)
+        preguntar_crear_usuarios(base_de_datos)
     else:
         es_login = login(base_de_datos)
         if not es_login:
             print("No pude acceder al sistema. Intente nuevamente")
             return
         print("Bienvenido al sistema")
-        preguntar_si_crear_usuarios(base_de_datos)
+        preguntar_crear_usuarios(base_de_datos)
 
- 
-
-# Variables globales
-
+# Variables generales
 BASE_DIR = Path(__file__).resolve().parent
 ruta_archivo = BASE_DIR / 'archivo.json'
-#revisar error de contraseña en json (aparece mal el nombre contraseña)
-
+#revisar error de contraseña en json (aparece mal el nombre contraseña en json)
 main()
