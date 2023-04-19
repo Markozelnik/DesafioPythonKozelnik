@@ -2,8 +2,7 @@ import json
 from pathlib import Path
 from pprint import pprint
 
- 
-
+  
 #ingreso de nuevos usuarios
 
 def crear_usuarios(base_de_datos):
