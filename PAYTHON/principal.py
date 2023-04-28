@@ -4,7 +4,7 @@ from pprint import pprint
 
 #la idea en un futuro seria registrarse y tener un nivel de abono con distintos beneficios dependiendo tu abono
 # en un futuro hacer algun apartado en html con los distinos abonos para que el usuario pueda ver
-
+#
 print("Buenos dias, bienvenido a Eslovenos Fc")
 print("Los distintos abonos disponibles son: bronce, oro y plata") 
 print("")
