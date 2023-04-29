@@ -100,5 +100,3 @@ BASE_DIR = Path(__file__).resolve().parent
 ruta_archivo = BASE_DIR / 'archivo.json'
 #revisar error de contraseña en json (aparece mal el nombre contraseña en json)
 main()
-
-
