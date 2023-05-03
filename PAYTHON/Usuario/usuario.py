@@ -1,6 +1,6 @@
 from PAYTHON.Usuario.modelo_usuario import Usuario
 from PAYTHON.Usuario.login import login
-from PAYTHON.Datos import ManejoArchivos, BaseDatos
+from PAYTHON.Datos.base_de_datos import ManejoArchivos, BaseDatos
 
 class Menu:
     def __init__(self) -> None:
