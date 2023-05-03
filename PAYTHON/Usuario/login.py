@@ -1,3 +1,5 @@
+from PAYTHON.Usuario.modelo_usuario import Usuario
+
 def login(db):
     def login_nombre(nombre):
         for usuario in Usuario.lista:
