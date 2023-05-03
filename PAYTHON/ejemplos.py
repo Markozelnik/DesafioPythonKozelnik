@@ -2,6 +2,22 @@ import json
 from pathlib import Path
 from pprint import pprint
 
+#esta fue mi primer entrega, y la dejo aca para ir cobiando lo que hice pero nada mas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #la idea en un futuro seria registrarse y tener un nivel de abono con distintos beneficios dependiendo tu abono
 # en un futuro hacer algun apartado en html con los distinos abonos para que el usuario pueda ver
 #

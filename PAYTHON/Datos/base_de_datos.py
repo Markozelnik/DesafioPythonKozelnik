@@ -2,6 +2,9 @@ import json
 from pathlib import Path
 from PAYTHON.Usuario.modelo_usuario import Usuario
 
+
+#json
+#base de datos del "programa"
 class ManejoArchivos:
     nombre_archivo = "mi_clase_14.json"
     BASE_DIR = Path(__file__).resolve().parent
@@ -39,7 +42,7 @@ class BaseDatos(ManejoArchivos):
             if datos.get("usuarios"):
                 for usuario in datos.get("usuarios"):
                     Usuario(**usuario)
-            return datos  # ****************** Se agrega
+            return datos  
 
     def guardar_datos(self):
         datos = {}
