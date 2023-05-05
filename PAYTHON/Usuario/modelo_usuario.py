@@ -4,6 +4,7 @@ from pathlib import Path
 #modelos de usuario 
 #muy basicos
 #tratar de hacerlo mejor para entrega 3 o final ( buscar ejemplos parecidos al profesor)
+
 class UsuarioModel:
     id = 0
     lista = []

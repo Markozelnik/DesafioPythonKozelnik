@@ -5,6 +5,7 @@ from PAYTHON.Usuario.modelo_usuario import Usuario
 
 #json
 #base de datos del "programa"
+
 class ManejoArchivos:
     nombre_archivo = "mi_clase_14.json"
     BASE_DIR = Path(__file__).resolve().parent

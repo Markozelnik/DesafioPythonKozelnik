@@ -67,5 +67,4 @@ def main():
         print("Los distintos abonos disponibles son: bronce, oro y plata") 
         Usuario.crear(database)
 
-
 main()
