@@ -10,24 +10,24 @@ class MenuPrincipal:
     def __init__(self) -> None:
         pass
 
-    def principal(self, database, user):  
+    def principal(self, database, persona):  
         while True:
-            print(f"\n{user}")
+            print(f"\n{persona}")
             print('Eslovenos Fc')
             print('1. Usuario')
             print('2. Logout')    
             opción = input('Elige una opción: ')
             if opción == '1':
-                self.usuario(database, user)
+                self.usuario(database, persona)
             elif opción == '2':
-                user = None
-                return user
+                persona = None
+                return persona
             else:
                 print('\nOpción inválida')
 
-    def usuario(self, database, user):  # para poder eliminar, crear o actualizar el abono mensual de Eslovenos fc
+    def usuario(self, database, persona):  # para poder eliminar, crear o actualizar el abono mensual de Eslovenos fc
         while True:
-            print(f"\n{user}")
+            print(f"\n{persona}")
             print('MENU USUARIO ESLOVENOS FC')
             print('1. Crear nuevo usuario')
             print('2. Ver mi abono')

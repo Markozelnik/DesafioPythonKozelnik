@@ -1,7 +1,7 @@
 from PAYTHON.Usuario.modelo_usuario import Usuario
 #login en Eslovenos Fc
 
-def login(db):#usuario
+def login(database):#usuario
     def login_nombre(nombre):
         for usuario in Usuario.lista:
             if nombre == usuario.nombre:
