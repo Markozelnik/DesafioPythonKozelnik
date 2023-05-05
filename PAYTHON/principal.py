@@ -10,7 +10,7 @@ class MenuPrincipal:
     def __init__(self) -> None:
         pass
 
-    def principal(self, db, user):  
+    def principal(self, database, user):  
         while True:
             print(f"\n{user}")
             print('Eslovenos Fc')
@@ -18,14 +18,14 @@ class MenuPrincipal:
             print('2. Logout')    
             opción = input('Elige una opción: ')
             if opción == '1':
-                self.usuario(db, user)
+                self.usuario(database, user)
             elif opción == '2':
                 user = None
                 return user
             else:
                 print('\nOpción inválida')
 
-    def usuario(self, db, user):  # para poder eliminar, crear o actualizar el abono mensual de Eslovenos fc
+    def usuario(self, database, user):  # para poder eliminar, crear o actualizar el abono mensual de Eslovenos fc
         while True:
             print(f"\n{user}")
             print('MENU USUARIO ESLOVENOS FC')
@@ -36,13 +36,13 @@ class MenuPrincipal:
             print('5. Volver al menú principal')
             opción = input('Elige una opción: ')
             if opción == '1':
-                Usuario.crear(db)
+                Usuario.crear(database)
             elif opción == '2':
                 Usuario.listar()
             elif opción == '3':
-                Usuario.actualizar(db)
+                Usuario.actualizar(database)
             elif opción == '4':
-                Usuario.eliminar(db)
+                Usuario.eliminar(database)
             elif opción == '5':
                 break
             else:
@@ -50,22 +50,22 @@ class MenuPrincipal:
 
 #base de datos de Eslovenos Fc
 def main():
-    db = BaseDatos()
-    hay_usuarios = db.cargar_datos()
+    database = BaseDatos()
+    hay_usuarios = database.cargar_datos()
     if hay_usuarios:
         while True:
-            user = login(db)
+            user = login(database)
             if user:
                 menu = MenuPrincipal()
-                logout = menu.principal(db, user)
+                logout = menu.principal(database, user)
                 if logout:
-                    db = {}
+                    database = {}
                     continue
     else:
         print("Bienvenido a Eslovenos Fc") #bienvenida al programa 
         print("Esta listo para unirse a la familia Eslovena?")
         print("Los distintos abonos disponibles son: bronce, oro y plata") 
-        Usuario.crear(db)
+        Usuario.crear(database)
 
 
 main()
