@@ -7,16 +7,195 @@
     <title>Eslovenos FC</title>
 </head>
 <body>
-
-    <!--falta personalizar el html-->
-    <!--en un futuro estara todo conectado con html-->
-    <h1>Eslovenos FC</h1>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ut molestiae culpa nam ab maxime quam unde in quibusdam nemo et animi dicta, rerum, numquam mollitia cumque at nesciunt ad?</p>
-
-
-    <img src="" alt="">
-
+        <!--Falta conectar todo con scss y css en un futuro pero ya estan las clases puestas-->
+    <div class="divprincipal"> 
+        <header class="headerprin"> 
+          <!-- del lado izquierdo arriba iria el logo-->
+          <!-- el nombre de la pagina centrado y debajo zona navegable -->
+         
+        
+          <!--logo de la pagina-->
+                    <section class="logo1">  
+                      <a class="logo1" href="index.html">
+                      <img src="Imagenes/logo3.jpg"  class="logoindex"  alt="LogoSportWorld">
+                     </a>
+                    </section> 
+          
+           
+            <nav class="zonanav1">
+              
+                <ul class="navbar zonanav2">
+                    <li>
+                        <a class="navegacion" href="deportes.html">Deportes</a>
+                    </li>
+                    <li>
+                        <a class="navegacion"  href="videos.html">Videos</a>
+                    </li>
+                    <li>
+                        <a class="navegacion"  href="competiciones.html">Competiciones</a>
+                    </li>
+                    <li>
+                         <a class="navegacion" href="famosos.html">Famosos</a>
+                    </li>
+    
+                </ul>
+    
+            </nav>
+      
+        </header>
+       
+     
+         <!-- fin de header-->
+        <!-- inicio de texto -->
+        <section class="sectionp">
+        <p class="texto1">Somos una pagina especialista en brindar toda la historia, informacion, estadisticas y todo referido al deporte. Somos un grupo de fanaticos que amamos el deporte y armamos un sitio webb que puedes ver todas tus competiciones, jugadores y deportes favoritos. Los deportes que disponemos en este sitio webb son Futbol, Basquetball, Voley, Formula1, Tenis y Rugby. Puedes ver todo lo referido con la Copa Conmebol Libertadores, Nba, Copa Davis o Rugby Premiership. Queres saber la historia de Messi, Verstappen o Djokovic, este es el lugar indicado</p>
+        </section>
+    
+        <!--fin de texto-->
+         <!--incio de carousel debajo de la zona nav--> <!-- class carousel1 se lo agregue yo -->
+          
+         <div id="carouselExampleCaptions" class="carousel slide carousel1" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+              <div class="carousel-item active" >
+                <a href="Messi.html">
+                <img src="Imagenes/nessicarruprin.jpg" class="d-block w-100" alt="LionelMessi">
+                </a>
+                <div class="carruselprin carousel-caption d-none d-md-block">
+                  <h5> Lionel Andres Messi</h5>
+                  <p>Messi campeon con la Argentina por primer vez</p>
+                </div>
+              </div>
+            
+              
+            
+               <div class="carousel-item">
+                <a href="Verstappen.html">
+                <img src="Imagenes/versappen.png" class="d-block w-100" alt="Max Verstappen">
+              </a>
+                <div class="carruselprin carousel-caption d-none d-md-block">
+                  <h5>Max Verstappen</h5>
+                  <p>Max Verstappen campeon de la F1</p>
+                </div>
+              </div>
+            
+            
+              <div class="carousel-item">
+                <a href="Djokovic.html">
+                <img src="Imagenes/djokovic4.jpg" class="d-block w-100" alt="Novak Djokovic">
+              </a>
+                <div class="carruselprin carousel-caption d-none d-md-block">
+                  <h5>Novak Djokovic</h5>
+                  <p>Siguen las polemicas con Djokovic</p>
+                </div>
+              </div>
+            </div>
+          
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+                
+         <!--fin de zona imagen-->
+    
+    
+          <!--inicio de article-->
+            <section class="article1">
+                           <!-- 4 imagenes cada una con su texto debajo-->
+               <div class="foto divfotos1">
+                 <a href="https://www.youtube.com/watch?v=lme15YYJUtQ">
+                <img class="deportesfoto2" src="Imagenes/vini.jpeg" alt="RealmadridvsPsg">
+                 </a>
+                <p class="pprin">Real Madrid se va de Manchester con un resultado muy favorable para la vuelta en el Bernabeu con su gente, los ingleses tendran que lidiar con la historia del gigante español.</p>
+               </div>
+         
+                <div class="foto divfotos2">
+                  <a href="https://www.youtube.com/watch?v=XP_ZFaeASoo">
+                <img class="deportesfoto3" src="Imagenes/foto5.jpg" alt="NBA">
+                  </a>
+                <p class="pprin">Arrancan los Play off de la NBA, volvio la mejor epoca del año en el ambito del Basquet.Luca Doncic, Stephen Curry y todos los mejores jugadores del mundo.</p>
+               </div>
+             </section>
+         
+            <section class="articlefem">
+                  <div class="foto divfotosfem">
+                     <a href="https://www.youtube.com/watch?v=ydPP2qya9pY">
+                    <img class="fotofem" src="Imagenes/voleyfem1.jpg" alt="Voley femenino">
+                    </a>
+                    <p class="pfem">Las argentinas Eliana Rodriguez y Natalia Nizetich se consagraron campeonas en Italia. Las jugadores de la seleccion argentina pronto se incorporaran a la seleccion</p>
+                  </div>
+    
+                  <div class="foto divfotosfem2">
+                     <a href="https://www.youtube.com/watch?v=fduc5bZx3ss">
+                    <img class="fotofem2" src="Imagenes/tenisfem1.jpg" alt="Tenis femenino">
+                    </a>
+                    <p class="pfem2">Simona Halep derrota a Serena Williams en un partido apacionante en el tenis femenino. Dura derrota para la mejor tenista del mundo.</p>
+                  </div>
+            </section>
+    
+            <!--fin de article-->
+    
+    
+         <section class="zonavideo">
+              <!-- debajo vendra un video de youtube -->
+              
+          <iframe class="you video1"  width="560" height="315" src="https://www.youtube.com/embed/4jK2vjqcO5o" title="PSg vs real madrid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             
+         </section>
+    
+    
+           <!-- Inicio de Aside-->
+    
+        <aside class="aside1">
+           <!-- a la derecha de la segunda foto ira un calendario de partidos y competencias favoritas del usuario-->
+           
+    
+    
+        </aside >
+      
+          <!-- fin de aside-->
+        
+          <!--inicio de footer-->
+    
+        <footer class="footerprin ">
+    
+           <!-- del lado izquierdo abajo iran las redes sociales Whatsapp, instagram Y Twitter-->
+           <!-- del lado derecho abajo ira una zona navegable para cambiar el idioma de la pagina-->
+          
+           <nav class="redes">
+                <ul>
+                 <!--icono de whatsapp-->
+                 <img class="iconos" src="Imagenes/whatsapp.png" alt="Whatsapp">
+                 <li ><a class="color" href="https://web.whatsapp.com/">Whatsapp</a></li>
+                 
+                 <!--icono de Instagram-->
+                 <img class="iconos" src="Imagenes/instagram.png" alt="Instagram">
+                 <li><a class="color" href="https://www.instagram.com/?hl=es-la">Instagram</a></li>
+                
+                 <!--incono de Twitter-->
+                 <img class="iconos" src="Imagenes/Twitter.png" alt="Twitter">
+                 <li><a class="color" href="https://twitter.com/?lang=es">Twitter</a></li>
+    
+                </ul>
+    
+    
+    
+        </footer>
+    </div>
+        <!-- fin de footer-->
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 </html>
