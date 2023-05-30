@@ -14,11 +14,6 @@ from . import forms, models
 # def index(request: HttpRequest) -> HttpResponse:
 #     return render(request, "producto/index.html")
 
-class  ProductoCategoriaList (models.Model):
-    nombre = models.CharField (max_lenght=50)
-    
-    def __str__(self):
-        return self.nombre
 
 
 class IndexView(TemplateView):
